@@ -8,11 +8,11 @@ def line(array)
   puts string
 end
 
-def take_a_number(array, string)
-  array.push(string)
+def take_a_number(array)
+  #array.push(string)
   array.each_with_index do |item, index|
-    return puts "Welcome, #{string}. You are number 1 in line." if array.size == 1
-    puts "Welcome, #{item}. You are number #{index + 1} in line." if (index + 1) == array.size
+    return puts "Welcome, you are number #{index + 1} in line." if array.size == 1
+    puts "Welcome, you are number #{index + 1} in line." if (index + 1) == array.size
   end
 end
 
@@ -21,3 +21,5 @@ def now_serving(array)
   serving = array.shift()
   return puts "Currently serving #{serving}."
 end
+
+take_a_number([1])
